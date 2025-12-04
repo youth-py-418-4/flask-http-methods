@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ produto["name"] }}
+{% endblock %}
+
+{% block content %}
+    <h1>{{ produto["name"] }}</h1>
+    <p>{{ produto["price"] }}</p>
+    <p>{{ produto["reviews"] }}</p>
+{% endblock %}
+    

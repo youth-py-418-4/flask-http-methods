@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+    
+{% block content %}
+    {% if erro != undefined %}
+        <div style="background-color: red; padding: 10px; color: #fff;">
+            {{ erro }}
+        </div>
+    {% endif %}
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Concluido</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for tarefa in tarefas %}
+            <tr>
+                <td>{{ tarefa["id"] }}</td>
+                <td>{{ tarefa["label"] }}</td>
+                <td>{{ tarefa["finished"] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <form method="post" action="/">
+        <label for="name">Nome da tarefa</label>
+        <input 
+            type="text" 
+            placeholder="Dar comida para os gatos" 
+            id="name" 
+            name="name"
+            required
+        >
+        <button type="submit">Enviar</button>
+    </form>
+
+{% endblock %}
