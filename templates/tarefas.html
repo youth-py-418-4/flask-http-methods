@@ -1,4 +1,9 @@
 {% extends 'base.html' %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/tarefas.css') }}">
+{% endblock %}
+
     
 {% block content %}
     {% if erro != undefined %}
@@ -13,6 +18,7 @@
                 <th>Id</th>
                 <th>Nome</th>
                 <th>Concluido</th>
+                <th>Ações</th>
             </tr>
         </thead>
 
@@ -22,6 +28,9 @@
                 <td>{{ tarefa["id"] }}</td>
                 <td>{{ tarefa["label"] }}</td>
                 <td>{{ tarefa["finished"] }}</td>
+                <td>
+                    <a href="/excluir/{{ loop.index - 1 }}">Excluir</a>
+                </td>
             </tr>
             {% endfor %}
         </tbody>

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <nav>
+        <div class="logo">{{ champion["name"] }}</div>
+        <ul class="menu">
+            {% for tag in champion["tags"] %}
+                <li>{{tag}}</li>
+            {% endfor %}
+        </ul>
+    </nav>
+
+    <button>Enviar</button>
+{% endblock %}

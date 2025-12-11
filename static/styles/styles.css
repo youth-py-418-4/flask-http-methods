@@ -1,0 +1,54 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+}
+
+.box {
+    background-color: #64FF00;
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#destaque {
+    background-color: #6400ff;
+}
+
+.box {
+    background-color: #FF0064;
+}
+
+button {
+    color: white;
+    background-color: #6400ff;
+    padding: 5px;
+    border-radius: 4px;
+    border: none;
+}
+
+
+
+
+nav {
+    background-color: #ddd;
+    padding: 10px;
+}
+
+.logo {
+    display: inline-block;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.menu {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    display: inline-block;
+}
